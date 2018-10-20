@@ -23,6 +23,7 @@ public class TerrainGeneratorEditor : Editor {
         {
             generate.ResetTransform();
         }
+        
     }
 
 }

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Chunk
   - Chunk Destroyer
+  - "Chunk \xE0 ne pas d\xE9truire"
   layers:
   - Default
   - TransparentFX

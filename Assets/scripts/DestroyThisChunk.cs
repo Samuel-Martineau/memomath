@@ -4,12 +4,11 @@ using UnityEngine;
 
 public class DestroyThisChunk : MonoBehaviour {
 
-    public float targetTimer = 30f;
+    private GameObject chunk;
 
     private void Update()
     {
-        targetTimer -= Time.deltaTime;
-        if(targetTimer <= 0.0f)
+        if(gameObject.name == "First_Chunk")
         {
             DestroyThisOldChunk();
         }
