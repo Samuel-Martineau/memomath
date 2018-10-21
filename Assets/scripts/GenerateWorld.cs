@@ -8,15 +8,15 @@ public class GenerateWorld : MonoBehaviour {
     public GameObject Motif;
     public GameObject[] ListOfchunks;
     public GameObject[] Motifs;
-    public GameObject camera;
+    public GameObject Maincamera;
     public int MotifsLength;
     public int random;
     CameraMouvement cameraScript;
 
     private void Start()
     {
-        camera = GameObject.Find("Main Camera");
-        cameraScript = camera.GetComponent<CameraMouvement>();
+        Maincamera = GameObject.Find("Main Camera");
+        cameraScript = Maincamera.GetComponent<CameraMouvement>();
     }
 
     public void ChooseMotif ()

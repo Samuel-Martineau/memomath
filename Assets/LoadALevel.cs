@@ -12,7 +12,7 @@ public class LoadALevel : MonoBehaviour {
     {
         if(collision.gameObject.tag == "Player")
         {
-            script.LoadLevel(sceneIndex);
+            script.FadeToLevel(sceneIndex);
         }
     }
 }

@@ -6,8 +6,23 @@ using UnityEngine.UI;
 public class LevelLoader : MonoBehaviour {
 
     public GameObject loadingScreen;
+    public GameObject FadeScreen;
     public Slider slider;
-    
+    public Text progressText;
+
+    public Animator animator;
+
+
+    private void Start()
+    {
+        FadeScreen.SetActive(true);
+        loadingScreen.SetActive(false);
+    }
+
+    public void FadeToLevel (int sceneIndex)
+    {
+        animator.SetTrigger("FadeOut");
+    }
 
     public void LoadLevel (int sceneIndex)
     {
@@ -25,8 +40,10 @@ public class LevelLoader : MonoBehaviour {
             float progress = Mathf.Clamp01(operation.progress / .9f);
 
             slider.value = progress;
+            progressText.text = progress * 100f + "%";
 
             yield return null;
         }
     }
+    
 }
