@@ -5,14 +5,9 @@ using UnityEngine;
 public class plateformeScript : MonoBehaviour {
 
     public Collider2D plateformes;
-	
-	// Update is called once per frame
-	void Update () {
 
-        if (PlayerMouvement.jump ==true)
-        {
-            plateformes.enabled = !plateformes.enabled;
-        }
-
-	}
+    private void Update()
+    {
+        if (Input.GetButtonDown("Crouch")) { plateformes.enabled = false; } else if (Input.GetButtonUp("Crouch")) { plateformes.enabled = true; }
+    }
 }
