@@ -9,7 +9,7 @@ public class LevelLoader : MonoBehaviour {
     public GameObject FadeScreen;
     public Slider slider;
     public Text progressText;
-
+    private int SceneIndex;
     public Animator animator;
 
 
@@ -21,7 +21,13 @@ public class LevelLoader : MonoBehaviour {
 
     public void FadeToLevel (int sceneIndex)
     {
+        SceneIndex = sceneIndex;
         animator.SetTrigger("FadeOut");
+    }
+
+    public void OnFadeComplete ()
+    {
+        LoadLevel(SceneIndex);
     }
 
     public void LoadLevel (int sceneIndex)
