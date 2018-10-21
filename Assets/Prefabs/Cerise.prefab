@@ -21,10 +21,8 @@ GameObject:
   - component: {fileID: 4628637542103990}
   - component: {fileID: 212511860805396772}
   - component: {fileID: 95842683440123962}
-  - component: {fileID: 58125066393366948}
-  - component: {fileID: 58245454023261056}
-  - component: {fileID: 58296998064527690}
-  - component: {fileID: 50853073339393924}
+  - component: {fileID: 58483415608498698}
+  - component: {fileID: 114007212438635490}
   m_Layer: 0
   m_Name: Cerise
   m_TagString: Untagged
@@ -45,27 +43,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &50853073339393924
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1899596450945764}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 5
---- !u!58 &58125066393366948
+--- !u!58 &58483415608498698
 CircleCollider2D:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -74,42 +52,12 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.022371694, y: -0.020134486}
+  m_Offset: {x: -0.034952063, y: -0.0059674163}
   serializedVersion: 2
-  m_Radius: 0.055036496
---- !u!58 &58245454023261056
-CircleCollider2D:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1899596450945764}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.06860656, y: 0.020880261}
-  serializedVersion: 2
-  m_Radius: 0.039376345
---- !u!58 &58296998064527690
-CircleCollider2D:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1899596450945764}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.029903239, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.075096756
+  m_Radius: 0.06408054
 --- !u!95 &95842683440123962
 Animator:
   serializedVersion: 3
@@ -128,6 +76,17 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114007212438635490
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1899596450945764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5c04acf4b73c4354a82ec0e974c7dd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212511860805396772
 SpriteRenderer:
   m_ObjectHideFlags: 1
