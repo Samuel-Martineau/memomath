@@ -2783,6 +2783,48 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 416983985}
   m_CullTransparentMesh: 0
+--- !u!1001 &475523619
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4628637542103990, guid: 658ca0e9980b44f5799861cbf5d4ed8c, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 2.77
+      objectReference: {fileID: 0}
+    - target: {fileID: 4628637542103990, guid: 658ca0e9980b44f5799861cbf5d4ed8c, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -1.13
+      objectReference: {fileID: 0}
+    - target: {fileID: 4628637542103990, guid: 658ca0e9980b44f5799861cbf5d4ed8c, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4628637542103990, guid: 658ca0e9980b44f5799861cbf5d4ed8c, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4628637542103990, guid: 658ca0e9980b44f5799861cbf5d4ed8c, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4628637542103990, guid: 658ca0e9980b44f5799861cbf5d4ed8c, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4628637542103990, guid: 658ca0e9980b44f5799861cbf5d4ed8c, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4628637542103990, guid: 658ca0e9980b44f5799861cbf5d4ed8c, type: 2}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 658ca0e9980b44f5799861cbf5d4ed8c, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1 &537182708
 GameObject:
   m_ObjectHideFlags: 0
@@ -3832,6 +3874,11 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1421756645}
   m_CullTransparentMesh: 0
+--- !u!4 &1423918800 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4012248186732462, guid: be32e2c6488c841b4afe5b927328e3cb,
+    type: 2}
+  m_PrefabInternal: {fileID: 385046408}
 --- !u!1 &1480424240
 GameObject:
   m_ObjectHideFlags: 0
@@ -5092,6 +5139,63 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &1703920944
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1703920945}
+  - component: {fileID: 1703920947}
+  - component: {fileID: 1703920946}
+  m_Layer: 0
+  m_Name: Poseur de question
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1703920945
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1703920944}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 17.241798, y: 10.895206, z: 7.3797584}
+  m_LocalScale: {x: 1.3417742, y: 1.3417742, z: 1.3417742}
+  m_Children: []
+  m_Father: {fileID: 1423918800}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1703920946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1703920944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3c160177191c45758aacf85e3c8a50b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Question: {fileID: 1899596450945764, guid: 658ca0e9980b44f5799861cbf5d4ed8c, type: 2}
+  pos: {x: 0, y: 0, z: 0}
+  maxTime: 10
+  timer: 0
+--- !u!65 &1703920947
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1703920944}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1732163028
 GameObject:
   m_ObjectHideFlags: 0

@@ -6,6 +6,10 @@ public class ManageGame : MonoBehaviour {
 
     public GameObject Player;
 
+    public void ResetPlayerPrefs ()
+    {
+        PlayerPrefs.DeleteAll();
+    }
 
     public void EndGame ()
     {

@@ -1,16 +1,16 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEditor;
 
-public class GameManagerEditor : MonoBehaviour {
+[CustomEditor(typeof(ManageGame))]
+public class GameManagerEditor : Editor {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    public override void OnInspectorGUI()
+    {
+        ManageGame askQuestion = (ManageGame)target;
+        if (GUILayout.Button("Reset PlayerPrefs"))
+        {
+            askQuestion.ResetPlayerPrefs();
+        }
+        base.OnInspectorGUI();
+    }
 }
