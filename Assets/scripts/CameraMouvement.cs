@@ -15,6 +15,7 @@ public class CameraMouvement : MonoBehaviour {
 
     private void FixedUpdate()
     {
+
         transform.Translate(x, 0f, 0f);
         DistanceParcourue = DistanceParcourue + x;
         if(DistanceParcourue >= 1)

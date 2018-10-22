@@ -8,8 +8,16 @@ public class PowerUpScript : MonoBehaviour {
     {
         if(other.CompareTag("Player"))
         {
-            Debug.Log("test");
+            Pickup();
         }
+    }
+
+    void Pickup()
+    {
+
+
+        Destroy(gameObject);
+        Debug.LogWarning("cerise");
     }
 
 }

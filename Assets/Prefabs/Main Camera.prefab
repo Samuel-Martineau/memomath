@@ -11,6 +11,40 @@ Prefab:
   m_SourcePrefab: {fileID: 0}
   m_RootGameObject: {fileID: 1568831156183562}
   m_IsPrefabAsset: 1
+--- !u!1 &1019005532259568
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4656672291575678}
+  - component: {fileID: 61850855201872864}
+  - component: {fileID: 114363980614096556}
+  m_Layer: 0
+  m_Name: Player Killer Back
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1184460600069832
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4452359302163354}
+  - component: {fileID: 61559878494334278}
+  - component: {fileID: 114346356067525434}
+  m_Layer: 0
+  m_Name: Player Killer Front
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1568831156183562
 GameObject:
   m_ObjectHideFlags: 0
@@ -53,12 +87,40 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1568831156183562}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.02, y: 0, z: -5.5}
+  m_LocalPosition: {x: 0, y: 0, z: -5.5}
   m_LocalScale: {x: 0.74528193, y: 0.74528193, z: 0.74528193}
   m_Children:
   - {fileID: 4927416920976704}
+  - {fileID: 4656672291575678}
+  - {fileID: 4452359302163354}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4452359302163354
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1184460600069832}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 20.7, y: 0, z: 7.379759}
+  m_LocalScale: {x: 1.3417742, y: 1.3417742, z: 1.3417742}
+  m_Children: []
+  m_Father: {fileID: 4097471446398002}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4656672291575678
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1019005532259568}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -19.952183, y: 0, z: 7.3797584}
+  m_LocalScale: {x: 1.3417742, y: 1.3417742, z: 1.3417742}
+  m_Children: []
+  m_Father: {fileID: 4097471446398002}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4927416920976704
 Transform:
@@ -68,7 +130,7 @@ Transform:
   m_GameObject: {fileID: 1785892900544732}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.002, y: 0, z: 10}
-  m_LocalScale: {x: 7.684994, y: 7.593597, z: 7.593597}
+  m_LocalScale: {x: 8.630249, y: 8.52761, z: 8.52761}
   m_Children: []
   m_Father: {fileID: 4097471446398002}
   m_RootOrder: 0
@@ -113,6 +175,56 @@ Camera:
   m_OcclusionCulling: 0
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!61 &61559878494334278
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1184460600069832}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.03765583}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 18.999708}
+  m_EdgeRadius: 0
+--- !u!61 &61850855201872864
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1019005532259568}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.03765583}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 18.999708}
+  m_EdgeRadius: 0
 --- !u!81 &81316438471313838
 AudioListener:
   m_ObjectHideFlags: 1
@@ -131,6 +243,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89c3b447474aa4acfae786c52d2f4be4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  x: 0.05
+  DistanceParcourue: 0
+  UnitParcouru: 100
 --- !u!114 &114223497710147208
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -150,11 +265,34 @@ MonoBehaviour:
     Brackeys"
   - "Les tutos Youtube de Brackeys et de TutoUnityFr ont grandement aid\xE9 \xE0 la
     cr\xE9ation du jeu"
-  - "L'asset Simple UI de Unruly Games a servi \xE0 la cr\xE9ation des menus"
-  - "L'asset Starter Maker (Font), de Paul Dela Cruz, a \xE9t\xE9 utilis\xE9 dans
-    les menus"
+  - "Text mesh Pro text est utilis\xE9"
+  - ' '
   - "L'audio est g\xE9r\xE9 par un Audio Manager, cr\xE9\xE9 selon une vid\xE9o de
     Brackeys"
+--- !u!114 &114346356067525434
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1184460600069832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33c82956a58b74129a79ae5ec81d5067, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  script: {fileID: 0}
+--- !u!114 &114363980614096556
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1019005532259568}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33c82956a58b74129a79ae5ec81d5067, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  script: {fileID: 0}
 --- !u!212 &212600745812082224
 SpriteRenderer:
   m_ObjectHideFlags: 1
