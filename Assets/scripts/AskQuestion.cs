@@ -11,15 +11,15 @@ public class AskQuestion : MonoBehaviour
     public TextMeshProUGUI NbDeQuestion;
     public TextMeshProUGUI Chiffre1;
     public TextMeshProUGUI Chiffre2;
-    public TextMeshProUGUI TexteBoutton1;
-    public TextMeshProUGUI TexteBoutton2;
-    public TextMeshProUGUI TexteBoutton3;
-    public TextMeshProUGUI TexteBoutton4;
+
+    private int[] BadAnswers;
 
     public int chiffre1;
     private int symbole;
     public string SymboleString;
     public int chiffre2;
+
+    public int GoodAnswer;
 
 
 
@@ -29,19 +29,15 @@ public class AskQuestion : MonoBehaviour
         QuestionCanvas.enabled = false;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     public void Ask_Question()
     {
+        NbDeQuestion.text = "Question #" + PlayerPrefs.GetInt("NbDeBonnesRéponses");
         CreateGoodAnswer();
+        QuestionCanvas.enabled = true; 
         QuestionCanvas.enabled = true;
     }
 
-    public void CreateGoodAnswer ()
+    public void CreateGoodAnswer()
     {
         CreateChiffres();
         // < : 1  
@@ -51,9 +47,12 @@ public class AskQuestion : MonoBehaviour
         if (chiffre1 == chiffre2) { SymboleString = "="; symbole = 2; }
         if (chiffre1 > chiffre2) { SymboleString = ">"; symbole = 3; }
         ConvertSymboleToString();
+        ChooseGoodAnswer();
     }
 
-    public void CreateChiffres ()
+    //***
+
+    public void CreateChiffres()
     {
         chiffre1 = Random.Range(1, 61);
         chiffre2 = Random.Range(1, 61);
@@ -61,11 +60,44 @@ public class AskQuestion : MonoBehaviour
         Chiffre2.text = chiffre2.ToString();
     }
 
-    private void ConvertSymboleToString ()
+    private void ConvertSymboleToString()
     {
         if (symbole == 1) { SymboleString = "<"; }
         if (symbole == 2) { SymboleString = "="; }
         if (symbole == 3) { SymboleString = ">"; }
+    }
+
+    //***
+
+    private void ChooseGoodAnswer()
+    {
+        GoodAnswer = Random.Range(1, 4);
+    }
+
+    public void Button1()
+    {
+        if (symbole == 1) { Debug.LogWarning("Bonne Réponse"); isGoodAnswer(); }
+        else { Debug.LogWarning("Mauvaise Réponse"); isBadAnswer(); }
+    }
+    public void Button2()
+    {
+        if (symbole == 2) { Debug.LogWarning("Bonne Réponse"); isGoodAnswer(); }
+        else { Debug.LogWarning("Mauvaise Réponse"); isBadAnswer(); }
+    }
+    public void Button3()
+    {
+        if (symbole == 3) { Debug.LogWarning("Bonne Réponse"); isGoodAnswer(); }
+        else { Debug.LogWarning("Mauvaise Réponse"); isBadAnswer(); }
+    }
+
+    public void isGoodAnswer ()
+    {
+        PlayerPrefs.SetInt("NbDeBonnesRéponses", PlayerPrefs.GetInt("NbDeBonnesRéponses") + 1 );
+        QuestionCanvas.enabled = false;
+    }
+    public void isBadAnswer()
+    {
+        QuestionCanvas.enabled = false;
     }
 
 
