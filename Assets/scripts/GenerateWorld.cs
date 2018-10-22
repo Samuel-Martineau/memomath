@@ -15,7 +15,7 @@ public class GenerateWorld : MonoBehaviour {
 
     private void Start()
     {
-        Maincamera = GameObject.Find("Main Camera");
+        Maincamera = GameObject.Find("Main Camera Jeu");
         cameraScript = Maincamera.GetComponent<CameraMouvement>();
     }
 
