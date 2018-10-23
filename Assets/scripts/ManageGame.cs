@@ -5,6 +5,7 @@ using UnityEngine;
 public class ManageGame : MonoBehaviour {
 
     public GameObject Player;
+    public Restart script;
 
     public void ResetPlayerPrefs ()
     {
@@ -15,5 +16,6 @@ public class ManageGame : MonoBehaviour {
     {
         Debug.LogWarning("Le joueur est mort"); 
         Time.timeScale = 0f;
+        script.RestartGame();
     }
 }

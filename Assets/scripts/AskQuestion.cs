@@ -12,6 +12,8 @@ public class AskQuestion : MonoBehaviour
     public TextMeshProUGUI Chiffre1;
     public TextMeshProUGUI Chiffre2;
 
+    public TextMeshProUGUI TexteScore;
+
     private int[] BadAnswers;
 
     public int chiffre1;
@@ -21,17 +23,20 @@ public class AskQuestion : MonoBehaviour
 
     public int GoodAnswer;
 
+    public int Score;
+
 
 
     // Use this for initialization
     void Start()
     {
         QuestionCanvas.enabled = false;
+        TexteScore.text = "Score: 0";
     }
 
     public void Ask_Question()
     {
-        NbDeQuestion.text = "Question #" + PlayerPrefs.GetInt("NbDeBonnesRéponses");
+        NbDeQuestion.text = "Question #" + (Score + 1);
         CreateGoodAnswer();
         QuestionCanvas.enabled = true; 
         QuestionCanvas.enabled = true;
@@ -92,7 +97,8 @@ public class AskQuestion : MonoBehaviour
 
     public void isGoodAnswer ()
     {
-        PlayerPrefs.SetInt("NbDeBonnesRéponses", PlayerPrefs.GetInt("NbDeBonnesRéponses") + 1 );
+        Score++;
+        TexteScore.text = "Score: " + Score;
         QuestionCanvas.enabled = false;
     }
     public void isBadAnswer()
