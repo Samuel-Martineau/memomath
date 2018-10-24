@@ -313,7 +313,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89c3b447474aa4acfae786c52d2f4be4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  x: 0.02
+  Vitesse: 2
   DistanceParcourue: 0
   UnitParcouru: 100
 --- !u!114 &114798836700614664

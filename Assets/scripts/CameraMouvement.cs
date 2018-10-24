@@ -4,18 +4,23 @@ using UnityEngine;
 
 public class CameraMouvement : MonoBehaviour {
 
-    public float x;
+    public float Vitesse;
     public float DistanceParcourue;
     public int UnitParcouru;
+    private float x;
 
     private void Start()
     {
         UnitParcouru = 22;
     }
 
+    private void Update()
+    {
+        x = Vitesse / 100;
+    }
+
     private void FixedUpdate()
     {
-
         transform.Translate(x, 0f, 0f);
         DistanceParcourue = DistanceParcourue + x;
         if(DistanceParcourue >= 1)

@@ -6,6 +6,9 @@ using TMPro;
 
 public class AskQuestion : MonoBehaviour
 {
+    public GameObject CameraJeu;
+    CameraMouvement VitesseScript;
+
 
     public Canvas QuestionCanvas;
     public TextMeshProUGUI NbDeQuestion;
@@ -30,6 +33,7 @@ public class AskQuestion : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        VitesseScript = CameraJeu.GetComponent<CameraMouvement>();
         QuestionCanvas.enabled = false;
         TexteScore.text = "Score: 0";
     }
@@ -104,6 +108,7 @@ public class AskQuestion : MonoBehaviour
     public void isBadAnswer()
     {
         QuestionCanvas.enabled = false;
+        VitesseScript.Vitesse ++;
     }
 
 

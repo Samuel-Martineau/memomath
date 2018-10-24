@@ -8,16 +8,21 @@ public class CreateQuestion : MonoBehaviour {
     public Vector3 pos;
     Quaternion rotation;
 
+    public GameObject CameraJeu;
+    CameraMouvement VitesseScript;
+
     public float maxTime;
     public float timer;
     private  float maximumTime;
 
     private void Start()
     {
+        VitesseScript = CameraJeu.GetComponent<CameraMouvement>();
+
         maximumTime = maxTime + 1;
         SetTimer();
     }
-    
+
     private void FixedUpdate()
     {
         maximumTime = maxTime + 1;
@@ -39,6 +44,7 @@ public class CreateQuestion : MonoBehaviour {
     {
         pos = GameObject.Find("Poseur de question").transform.position;
         Instantiate(Question, pos, rotation, null);
+        VitesseScript.Vitesse = VitesseScript.Vitesse + 1;
         SetTimer();
     }
 }
