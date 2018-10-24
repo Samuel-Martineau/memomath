@@ -6,7 +6,7 @@ public class CreateQuestion : MonoBehaviour {
 
     public GameObject Question;
     public Vector3 pos;
-    Quaternion rotation;
+    public Quaternion rotation;
 
     public GameObject CameraJeu;
     CameraMouvement VitesseScript;

@@ -300,6 +300,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Question: {fileID: 1899596450945764, guid: 658ca0e9980b44f5799861cbf5d4ed8c, type: 2}
   pos: {x: 0, y: 0, z: 0}
+  CameraJeu: {fileID: 1456137152497824}
   maxTime: 10
   timer: 0
 --- !u!114 &114770472905593516
@@ -313,7 +314,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89c3b447474aa4acfae786c52d2f4be4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Vitesse: 2
+  Vitesse: 4
   DistanceParcourue: 0
   UnitParcouru: 100
 --- !u!114 &114798836700614664

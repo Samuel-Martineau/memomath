@@ -2019,11 +2019,31 @@ Prefab:
       propertyPath: script
       value: 
       objectReference: {fileID: 655346652}
-    - target: {fileID: 114655626288308514, guid: be32e2c6488c841b4afe5b927328e3cb,
+    - target: {fileID: 212254741341881788, guid: be32e2c6488c841b4afe5b927328e3cb,
         type: 2}
-      propertyPath: CameraJeu
-      value: 
-      objectReference: {fileID: 1549708791}
+      propertyPath: m_Color.r
+      value: 0.9056604
+      objectReference: {fileID: 0}
+    - target: {fileID: 212254741341881788, guid: be32e2c6488c841b4afe5b927328e3cb,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 0.9056604
+      objectReference: {fileID: 0}
+    - target: {fileID: 212254741341881788, guid: be32e2c6488c841b4afe5b927328e3cb,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 0.9056604
+      objectReference: {fileID: 0}
+    - target: {fileID: 212254741341881788, guid: be32e2c6488c841b4afe5b927328e3cb,
+        type: 2}
+      propertyPath: m_Color.a
+      value: 0.9647059
+      objectReference: {fileID: 0}
+    - target: {fileID: 114770472905593516, guid: be32e2c6488c841b4afe5b927328e3cb,
+        type: 2}
+      propertyPath: Vitesse
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: be32e2c6488c841b4afe5b927328e3cb, type: 2}
   m_IsPrefabAsset: 0
