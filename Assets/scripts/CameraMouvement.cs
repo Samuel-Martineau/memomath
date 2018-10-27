@@ -16,7 +16,7 @@ public class CameraMouvement : MonoBehaviour {
 
     private void Update()
     {
-        x = Vitesse / 400;
+        x = Vitesse / 800;
     }
 
     private void FixedUpdate()

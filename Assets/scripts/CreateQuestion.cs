@@ -44,7 +44,6 @@ public class CreateQuestion : MonoBehaviour {
     {
         pos = GameObject.Find("Poseur de question").transform.position;
         Instantiate(Question, pos, rotation, null);
-        VitesseScript.Vitesse = VitesseScript.Vitesse + 1;
         SetTimer();
     }
 }

@@ -7,9 +7,12 @@ public class Restart : MonoBehaviour {
 
     public int SceneIndex;
 
+    public string PlayerPref;
+
     public Canvas restartMenu;
 
     public TextMeshProUGUI TextScore;
+    public TextMeshProUGUI TextBestScore;
 
     public LevelLoader script;
 
@@ -29,6 +32,7 @@ public class Restart : MonoBehaviour {
         Score = ScoreScript.Score;
         restartMenu.enabled = true;
         TextScore.text = "Score: " + Score;
+        TextBestScore.text = "Meilleur score: " + PlayerPrefs.GetInt(PlayerPref);
     }
 
     public void BouttonRejouer ()

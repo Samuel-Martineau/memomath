@@ -44,7 +44,7 @@ public class GenerateWorld : MonoBehaviour {
         gameObject.transform.position = new Vector2(44f, 0f);
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         MotifsLength = Motifs.Length;
 

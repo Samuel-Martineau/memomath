@@ -1,17 +1,14 @@
 ﻿using UnityEngine;
 using UnityEditor;
 
-[CustomEditor(typeof(AskQuestion))]
-public class QuestionEditor : Editor {
+[CustomEditor(typeof(AskQuestionType1))]
+public class QuestionEditorType1 : Editor {
 
     public override void OnInspectorGUI()
     {
-        AskQuestion askQuestion = (AskQuestion)target;
+        AskQuestionType1 askQuestion = (AskQuestionType1)target;
 
-        if (GUILayout.Button("Créer la bonne réponse"))
-        {
-            askQuestion.CreateGoodAnswer();
-        }
+
         if (GUILayout.Button("Demander une question"))
         {
             askQuestion.Ask_Question();

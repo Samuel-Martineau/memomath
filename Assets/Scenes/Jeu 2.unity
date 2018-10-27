@@ -2212,7 +2212,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isAnsweringQuestion: 0
-  PlayerPref: BestScoreJeu1
+  PlayerPref: BestScoreJeu2
   TexteScore: {fileID: 1922932070}
   Score: 0
   timer: 1
@@ -4198,7 +4198,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e9a17acfc5b54297b63c6ac48359c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NumberQuestionToAsk: 1
+  NumberQuestionToAsk: 2
 --- !u!114 &687478968 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 114791528070936510, guid: 16dfe61f45f7a4443baf6265c30fe0b3,
@@ -8178,8 +8178,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acc5621868e98451fb603f128dd5140d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SceneIndex: 1
-  PlayerPref: BestScoreJeu1
+  SceneIndex: 2
+  PlayerPref: BestScoreJeu2
   restartMenu: {fileID: 1898185297}
   TextScore: {fileID: 96624488}
   TextBestScore: {fileID: 689610120}

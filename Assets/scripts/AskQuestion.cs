@@ -1,115 +1,98 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using TMPro;
 
-public class AskQuestion : MonoBehaviour
-{
+public class AskQuestion : MonoBehaviour {
+
+    public bool isAnsweringQuestion;
+
+    public string PlayerPref;
+
+    AskQuestionType1 askQuestionType1;
+    AskQuestionType2 askQuestionType2;
+
+    public TextMeshProUGUI TexteScore;
+    public int Score;
+
+    public float timer;
+
+    private int NbQuestion;
+    public TextMeshProUGUI NbDeQuestion;
+
+    public Canvas QuestionCanvas;
+
+    public TextMeshProUGUI TextBravo;
+    public TextMeshProUGUI TextOups;
+
+    private bool cooldown;
+
     public GameObject CameraJeu;
     CameraMouvement VitesseScript;
 
-
-    public Canvas QuestionCanvas;
-    public TextMeshProUGUI NbDeQuestion;
-    public TextMeshProUGUI Chiffre1;
-    public TextMeshProUGUI Chiffre2;
-
-    public TextMeshProUGUI TexteScore;
-
-    private int[] BadAnswers;
-
-    public int chiffre1;
-    private int symbole;
-    public string SymboleString;
-    public int chiffre2;
-
-    public int GoodAnswer;
-
-    public int Score;
-
-
-
     // Use this for initialization
-    void Start()
-    {
+    void Start () {
+        isAnsweringQuestion = false;
+        askQuestionType1 = gameObject.GetComponent<AskQuestionType1>();
+        askQuestionType2 = gameObject.GetComponent<AskQuestionType2>();
+        TexteScore.text = "Score: 0";
+        DisableMessageText();
         VitesseScript = CameraJeu.GetComponent<CameraMouvement>();
         QuestionCanvas.enabled = false;
-        TexteScore.text = "Score: 0";
+        NbQuestion = 1;
     }
 
-    public void Ask_Question()
+    private void Update()
     {
-        NbDeQuestion.text = "Question #" + (Score + 1);
-        CreateGoodAnswer();
-        QuestionCanvas.enabled = true; 
-        QuestionCanvas.enabled = true;
+        if (cooldown == true)
+        {
+            timer -= Time.fixedDeltaTime;
+            if (timer <= 0)
+            {
+                DisableMessageText();
+                timer = 1;
+            }
+        }
     }
 
-    public void CreateGoodAnswer()
+    public void Ask_Question (int QuestionNumber)
     {
-        CreateChiffres();
-        // < : 1  
-        // = : 2  
-        // > : 3
-        if (chiffre1 < chiffre2) { SymboleString = "<"; symbole = 1; }
-        if (chiffre1 == chiffre2) { SymboleString = "="; symbole = 2; }
-        if (chiffre1 > chiffre2) { SymboleString = ">"; symbole = 3; }
-        ConvertSymboleToString();
-        ChooseGoodAnswer();
-    }
+        if (QuestionNumber == 1) { askQuestionType1.Ask_Question(); }
+        if (QuestionNumber == 2) { askQuestionType2.Ask_Question(); }
+        NbDeQuestion.text = "Question #" + NbQuestion;
+        NbQuestion++;
+        
 
-    //***
-
-    public void CreateChiffres()
-    {
-        chiffre1 = Random.Range(1, 61);
-        chiffre2 = Random.Range(1, 61);
-        Chiffre1.text = chiffre1.ToString();
-        Chiffre2.text = chiffre2.ToString();
     }
-
-    private void ConvertSymboleToString()
-    {
-        if (symbole == 1) { SymboleString = "<"; }
-        if (symbole == 2) { SymboleString = "="; }
-        if (symbole == 3) { SymboleString = ">"; }
-    }
-
-    //***
-
-    private void ChooseGoodAnswer()
-    {
-        GoodAnswer = Random.Range(1, 4);
-    }
-
-    public void Button1()
-    {
-        if (symbole == 1) { Debug.LogWarning("Bonne Réponse"); isGoodAnswer(); }
-        else { Debug.LogWarning("Mauvaise Réponse"); isBadAnswer(); }
-    }
-    public void Button2()
-    {
-        if (symbole == 2) { Debug.LogWarning("Bonne Réponse"); isGoodAnswer(); }
-        else { Debug.LogWarning("Mauvaise Réponse"); isBadAnswer(); }
-    }
-    public void Button3()
-    {
-        if (symbole == 3) { Debug.LogWarning("Bonne Réponse"); isGoodAnswer(); }
-        else { Debug.LogWarning("Mauvaise Réponse"); isBadAnswer(); }
-    }
-
-    public void isGoodAnswer ()
+    public void isGoodAnswer()
     {
         Score++;
+        if (Score > PlayerPrefs.GetInt(PlayerPref)) { PlayerPrefs.SetInt(PlayerPref, Score); }
         TexteScore.text = "Score: " + Score;
         QuestionCanvas.enabled = false;
+        VitesseScript.Vitesse++;
+
+
+        TextBravo.enabled = true;
+        TextOups.enabled = false;
+        cooldown = true;
+        isAnsweringQuestion = false;
+
     }
     public void isBadAnswer()
     {
         QuestionCanvas.enabled = false;
-        VitesseScript.Vitesse ++;
+
+        TextOups.enabled = true;
+        TextBravo.enabled = false;
+        cooldown = true;
+        isAnsweringQuestion = false;
     }
 
-
+    public void DisableMessageText()
+    {
+        TextBravo.enabled = false;
+        TextOups.enabled = false;
+        cooldown = false;
+    }
 }
