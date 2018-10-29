@@ -5,6 +5,8 @@ using TMPro;
 
 public class AskQuestion : MonoBehaviour {
 
+    public int QuestionNbType;
+
     public bool isAnsweringQuestion;
 
     public string PlayerPref;
@@ -40,6 +42,7 @@ public class AskQuestion : MonoBehaviour {
         VitesseScript = CameraJeu.GetComponent<CameraMouvement>();
         QuestionCanvas.enabled = false;
         NbQuestion = 1;
+        TexteScore.enabled = true;
     }
 
     private void Update()

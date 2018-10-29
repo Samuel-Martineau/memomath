@@ -235,9 +235,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f12b8215e39c346d8ab2f3e401e01db0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IsClimbing: 0
-  ClimbSpeed: 400
   runSpeed: 40
+  joystick: {fileID: 0}
+  joystickCanvas: {fileID: 0}
   controller: {fileID: 114302037672145476}
   animator: {fileID: 95848766510431458}
 --- !u!212 &212718961770714758
