@@ -8,6 +8,8 @@ public class AskQuestionType2 : MonoBehaviour
 {
     public GameObject Type1;
     public GameObject Type2;
+    public GameObject Type3;
+    public GameObject Question;
 
     private AskQuestion askQuestionScript;
 
@@ -64,6 +66,8 @@ public class AskQuestionType2 : MonoBehaviour
         QuestionCanvas.enabled = true;
         Type2.SetActive(true);
         Type1.SetActive(false);
+        Type3.SetActive(false);
+        Question.SetActive(true);
     }
 
     private void SetText()

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class QuestionToAsk : MonoBehaviour {
 
@@ -8,15 +9,28 @@ public class QuestionToAsk : MonoBehaviour {
 
     private GameObject Question;
     private AskQuestion askQuestion;
+    Scene currentScene;
+    int SceneIndex;
 
-	// Use this for initialization
-	void Start () {
-        Question = GameObject.Find("Question");
-        askQuestion = Question.GetComponent<AskQuestion>();
+
+    // Use this for initialization
+    void Start () {
+        currentScene = SceneManager.GetActiveScene();
+        SceneIndex = currentScene.buildIndex;
+
+        if (SceneIndex != 0)
+        {
+            Question = GameObject.Find("Question");
+            askQuestion = Question.GetComponent<AskQuestion>();
+        }
+
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        NumberQuestionToAsk = askQuestion.QuestionNbType;
+        if (SceneIndex != 0)
+        {
+            NumberQuestionToAsk = askQuestion.QuestionNbType;
+        }
 	}
 }

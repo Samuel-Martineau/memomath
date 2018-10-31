@@ -12,6 +12,8 @@ public class AskQuestionType1 : MonoBehaviour
 
     public GameObject Type1;
     public GameObject Type2;
+    public GameObject Type3;
+    public GameObject Question;
 
     public Canvas QuestionCanvas;
     public TextMeshProUGUI Chiffre1;
@@ -46,7 +48,9 @@ public class AskQuestionType1 : MonoBehaviour
         QuestionCanvas.enabled = true; 
         QuestionCanvas.enabled = true;
         Type2.SetActive(false);
+        Type3.SetActive(false);
         Type1.SetActive(true);
+        Question.SetActive(true);
     }
 
     public void CreateGoodAnswer()

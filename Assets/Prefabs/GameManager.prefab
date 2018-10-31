@@ -140,7 +140,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 0}
   script: {fileID: 0}
-  mobile: 1
+  mobile: 0
   scoreTexte: {fileID: 114992788777877330}
 --- !u!114 &114225774681102090
 MonoBehaviour:

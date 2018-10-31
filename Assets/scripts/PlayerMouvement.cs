@@ -57,7 +57,7 @@ public class PlayerMouvement : MonoBehaviour {
 
             float verticalMove = joystick.Vertical;
             //Sauter
-            if (verticalMove >= .5f) { jump = true; }
+            if (verticalMove >= .5f) { jump = true; verticalMove = 0f; }
             //S'accroupir
             if (verticalMove <= -.5f) { crouch = true; } else { crouch = false; }
         }
