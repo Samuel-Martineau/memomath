@@ -7,8 +7,6 @@ public class Restart : MonoBehaviour {
 
     public int SceneIndex;
 
-    public string PlayerPref;
-
     public Canvas restartMenu;
 
     public TextMeshProUGUI TextScore;
@@ -20,8 +18,13 @@ public class Restart : MonoBehaviour {
     AskQuestion ScoreScript;
     public int Score;
 
-	// Use this for initialization
-	void Start () {
+    GameObject GameData;
+    GameData DataScript;
+
+    // Use this for initialization
+    void Start () {
+        GameData = GameObject.Find("Game Data");
+        DataScript = GameData.GetComponent<GameData>();
         restartMenu.enabled = false;
         ScoreScript = QuestionMenu.GetComponent<AskQuestion>();
 	}
@@ -32,7 +35,7 @@ public class Restart : MonoBehaviour {
         Score = ScoreScript.Score;
         restartMenu.enabled = true;
         TextScore.text = "Score: " + Score;
-        TextBestScore.text = "Meilleur score: " + PlayerPrefs.GetInt(PlayerPref);
+        TextBestScore.text = "Meilleur score: " + PlayerPrefs.GetInt(DataScript.PlayerPrefs);
     }
 
     public void BouttonRejouer ()

@@ -32,7 +32,7 @@ public class PlayerMouvement : MonoBehaviour {
         else if(mobile == true)
         {
             joystickCanvas.enabled = true;
-            controller.m_JumpForce = 400f;
+            controller.m_JumpForce = 1200f;
         }
     }
 

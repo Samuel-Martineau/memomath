@@ -5,15 +5,14 @@ using TMPro;
 
 public class AskQuestion : MonoBehaviour {
 
-    public int QuestionNbType;
-
+    //public int QuestionNbType;
+    public GameObject GQuestion;
     public bool isAnsweringQuestion;
-
-    public string PlayerPref;
 
     AskQuestionType1 askQuestionType1;
     AskQuestionType2 askQuestionType2;
     AskQuestionType3 askQuestionType3;
+    AskQuestionType4 askQuestionType4;
     AskQuestionType5 askQuestionType5;
 
     public TextMeshProUGUI TexteScore;
@@ -34,12 +33,18 @@ public class AskQuestion : MonoBehaviour {
     public GameObject CameraJeu;
     CameraMouvement VitesseScript;
 
+    GameObject GameData;
+    GameData DataScript;
+
     // Use this for initialization
     void Start () {
+        GameData = GameObject.Find("Game Data");
+        DataScript = GameData.GetComponent<GameData>();
         isAnsweringQuestion = false;
         askQuestionType1 = gameObject.GetComponent<AskQuestionType1>();
         askQuestionType2 = gameObject.GetComponent<AskQuestionType2>();
         askQuestionType3 = gameObject.GetComponent<AskQuestionType3>();
+        askQuestionType4 = gameObject.GetComponent<AskQuestionType4>();
         askQuestionType5 = gameObject.GetComponent<AskQuestionType5>();
         TexteScore.text = "Score: 0";
         DisableMessageText();
@@ -64,9 +69,11 @@ public class AskQuestion : MonoBehaviour {
 
     public void Ask_Question (int QuestionNumber)
     {
+        GQuestion.SetActive(true);
         if (QuestionNumber == 1) { askQuestionType1.Ask_Question(); }
         if (QuestionNumber == 2) { askQuestionType2.Ask_Question(); }
         if (QuestionNumber == 3) { askQuestionType3.Ask_Question(); }
+        if (QuestionNumber == 4) { askQuestionType4.Ask_Question(); }
         if (QuestionNumber == 5) { askQuestionType5.Ask_Question(); }
 
         NbDeQuestion.text = "Question #" + NbQuestion;
@@ -77,7 +84,7 @@ public class AskQuestion : MonoBehaviour {
     public void isGoodAnswer()
     {
         Score++;
-        if (Score > PlayerPrefs.GetInt(PlayerPref)) { PlayerPrefs.SetInt(PlayerPref, Score); }
+        if (Score > PlayerPrefs.GetInt(DataScript.PlayerPrefs)) { PlayerPrefs.SetInt(DataScript.PlayerPrefs, Score); }
         TexteScore.text = "Score: " + Score;
         QuestionCanvas.enabled = false;
         VitesseScript.Vitesse++;

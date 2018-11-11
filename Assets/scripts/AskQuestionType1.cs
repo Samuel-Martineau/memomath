@@ -13,6 +13,7 @@ public class AskQuestionType1 : MonoBehaviour
     public GameObject Type1;
     public GameObject Type2;
     public GameObject Type3;
+    public GameObject Type4;
     public GameObject Question;
 
     public Canvas QuestionCanvas;
@@ -50,6 +51,7 @@ public class AskQuestionType1 : MonoBehaviour
         Type2.SetActive(false);
         Type3.SetActive(false);
         Type1.SetActive(true);
+        Type4.SetActive(false);
         Question.SetActive(true);
     }
 

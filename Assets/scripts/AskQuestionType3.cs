@@ -8,6 +8,7 @@ public class AskQuestionType3 : MonoBehaviour {
     public GameObject Type1;
     public GameObject Type2;
     public GameObject Type3;
+    public GameObject Type4;
 
     public GameObject Question;
 
@@ -66,9 +67,12 @@ public class AskQuestionType3 : MonoBehaviour {
         GenerateGoodAnswer();
         PlaySound(GoodAnswer);
 
+
+
         Type2.SetActive(false);
         Type3.SetActive(true);
         Type1.SetActive(false);
+        Type4.SetActive(false);
         Question.SetActive(false);
     }
 

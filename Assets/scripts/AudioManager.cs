@@ -33,6 +33,12 @@ public class AudioManager : MonoBehaviour {
             Debug.LogWarning("Le son " + s + "n'a pas été trouvé");
             return;
         }
+
+        s.source.volume = 0.1f;
+        s.source.Play();
+        s.source.volume = 0.5f;
+        s.source.Play();
+        s.source.volume = 1.0f;
         s.source.Play();
     }
 }

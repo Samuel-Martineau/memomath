@@ -25,12 +25,4 @@ public class QuestionToAsk : MonoBehaviour {
         }
 
 	}
-	
-	// Update is called once per frame
-	void Update () {
-        if (SceneIndex != 0)
-        {
-            NumberQuestionToAsk = askQuestion.QuestionNbType;
-        }
-	}
 }

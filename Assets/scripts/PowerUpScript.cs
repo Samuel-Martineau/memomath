@@ -8,15 +8,15 @@ public class PowerUpScript : MonoBehaviour {
     GameObject Question;
     AskQuestion script;
 
-    GameObject GameManager;
-    QuestionToAsk scriptGameManager;
+    GameObject GameData;
+    GameData DataScript;
 
     private void Start()
     {
         Question = GameObject.Find("Question");
         script = Question.GetComponent<AskQuestion>();
-        GameManager = GameObject.Find("GameManager");
-        scriptGameManager = GameManager.GetComponent<QuestionToAsk>();
+        GameData = GameObject.Find("Game Data");
+        DataScript = GameData.GetComponent<GameData>();
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -32,7 +32,7 @@ public class PowerUpScript : MonoBehaviour {
         script.isAnsweringQuestion = true;
         Destroy(gameObject);
         Debug.LogWarning("Une question doit être posée");
-        script.Ask_Question(scriptGameManager.NumberQuestionToAsk);
+        script.Ask_Question(DataScript.NumberQuestionToAsk);
     }
 
 }
