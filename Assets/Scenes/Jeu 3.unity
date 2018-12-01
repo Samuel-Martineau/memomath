@@ -1239,6 +1239,16 @@ Prefab:
       propertyPath: script
       value: 
       objectReference: {fileID: 750677007}
+    - target: {fileID: 114277280614675898, guid: f0cfbbfdcbe1340a09101140b86d8331,
+        type: 2}
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114277280614675898, guid: f0cfbbfdcbe1340a09101140b86d8331,
+        type: 2}
+      propertyPath: m_isInputParsingRequired
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 114992788777877330, guid: f0cfbbfdcbe1340a09101140b86d8331,
         type: 2}
       propertyPath: m_havePropertiesChanged
@@ -1636,7 +1646,12 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 114284924814208926, guid: be32e2c6488c841b4afe5b927328e3cb,
+    - target: {fileID: 114747077341762736, guid: be32e2c6488c841b4afe5b927328e3cb,
+        type: 2}
+      propertyPath: script
+      value: 
+      objectReference: {fileID: 655346652}
+    - target: {fileID: 114285920582991580, guid: be32e2c6488c841b4afe5b927328e3cb,
         type: 2}
       propertyPath: script
       value: 
@@ -1646,27 +1661,6 @@ Prefab:
       propertyPath: script
       value: 
       objectReference: {fileID: 655346652}
-    - target: {fileID: 1456137152497824, guid: be32e2c6488c841b4afe5b927328e3cb, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114770472905593516, guid: be32e2c6488c841b4afe5b927328e3cb,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1246317609643398, guid: be32e2c6488c841b4afe5b927328e3cb, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1557817391214676, guid: be32e2c6488c841b4afe5b927328e3cb, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1373050844868420, guid: be32e2c6488c841b4afe5b927328e3cb, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: be32e2c6488c841b4afe5b927328e3cb, type: 2}
   m_IsPrefabAsset: 0
@@ -5626,6 +5620,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0964c84c33ee246e996feff6763e4c6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CameraSpeed: 8
   NumberQuestionToAsk: 3
   SceneIndex: 3
   PlayerPrefs: BestScoreJeu3

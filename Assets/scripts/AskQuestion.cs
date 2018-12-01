@@ -6,6 +6,8 @@ using TMPro;
 public class AskQuestion : MonoBehaviour {
 
     //public int QuestionNbType;
+    private bool isScoreHigherThen40;
+
     public GameObject GQuestion;
     public bool isAnsweringQuestion;
 
@@ -48,7 +50,7 @@ public class AskQuestion : MonoBehaviour {
         askQuestionType5 = gameObject.GetComponent<AskQuestionType5>();
         TexteScore.text = "Score: 0";
         DisableMessageText();
-        VitesseScript = CameraJeu.GetComponent<CameraMouvement>();
+
         QuestionCanvas.enabled = false;
         NbQuestion = 1;
         TexteScore.enabled = true;
@@ -56,6 +58,10 @@ public class AskQuestion : MonoBehaviour {
 
     private void Update()
     {
+        if(DataScript.CameraSpeed > 40)
+        {
+            isScoreHigherThen40 = true;
+        }
         if (cooldown == true)
         {
             timer -= Time.fixedDeltaTime;
@@ -87,7 +93,10 @@ public class AskQuestion : MonoBehaviour {
         if (Score > PlayerPrefs.GetInt(DataScript.PlayerPrefs)) { PlayerPrefs.SetInt(DataScript.PlayerPrefs, Score); }
         TexteScore.text = "Score: " + Score;
         QuestionCanvas.enabled = false;
-        VitesseScript.Vitesse++;
+        if(isScoreHigherThen40 == false)
+        {
+            DataScript.CameraSpeed++;
+        }
 
 
         TextBravo.enabled = true;

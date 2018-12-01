@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CameraMouvement : MonoBehaviour {
 
+    private GameData GameData;
     public float Vitesse;
     public float DistanceParcourue;
     public int UnitParcouru;
@@ -11,12 +12,13 @@ public class CameraMouvement : MonoBehaviour {
 
     private void Start()
     {
+        GameData = GameObject.Find("Game Data").GetComponent<GameData>();
         UnitParcouru = 22;
     }
 
     private void Update()
     {
-        x = Vitesse / 800;
+        x = GameData.CameraSpeed / 800;
     }
 
     private void FixedUpdate()
