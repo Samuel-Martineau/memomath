@@ -17,7 +17,7 @@ jobs:
           draft: false
           prerelease: false
     outputs:
-      upload_url: steps.create_release.outputs.upload_url
+      upload_url: ${{ steps.create_release.outputs.upload_url }}
   build:
     runs-on: ubuntu-latest
     name: 'Compilation pour ${{ matrix.targetPlatform }} avec Unity v${{ matrix.unityVersion }}'
