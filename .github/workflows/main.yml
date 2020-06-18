@@ -45,6 +45,7 @@ jobs:
           UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
           UNITY_SERIAL: ${{ secrets.UNITY_SERIAL }}
       - run: test -d build/${{ matrix.targetPlatform }}/Contents/MacOS && chmod a+x build/${{ matrix.targetPlatform }}/Contents/MacOS/*
+        continue-on-error: true
       - uses: papeloto/action-zip@v1
         with:
           files: build/
