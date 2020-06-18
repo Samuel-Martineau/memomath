@@ -5,7 +5,7 @@ on: push
 jobs:
   build:
     runs-on: ubuntu-latest
-    name: "Compilation pour ${{ matrix.targetPlatform }} avec Unity v${{ matrix.unityVersion }}"
+    name: 'Compilation pour ${{ matrix.targetPlatform }} avec Unity v${{ matrix.unityVersion }}'
     strategy:
       fail-fast: false
       matrix:
@@ -20,7 +20,7 @@ jobs:
       - uses: actions/checkout@v2
         with:
           lfs: true
-      - uses: uses: webbertakken/unity-builder@v1.0
+      - uses: webbertakken/unity-builder@v1.0
         with:
           unityVersion: ${{ matrix.unityVersion }}
           targetPlatform: ${{ matrix.targetPlatform }}
