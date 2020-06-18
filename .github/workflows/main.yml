@@ -44,7 +44,9 @@ jobs:
           UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
           UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
           UNITY_SERIAL: ${{ secrets.UNITY_SERIAL }}
-      - run: test -d build/${{ matrix.targetPlatform }}/Contents/MacOS && chmod a+x build/${{ matrix.targetPlatform }}/Contents/MacOS/*
+      - run: ls
+      - run: ls -R build
+      - run: '[ -d build/StandaloneOSX/Contents/MacOS ] && chmod +x build/StandaloneOSX/Contents/MacOS/*'
         continue-on-error: true
       - uses: papeloto/action-zip@v1
         with:
@@ -53,7 +55,7 @@ jobs:
       - uses: frabert/replace-string-action@v1.1
         id: platform-name
         with:
-          pattern: 'Standalone(\w+)!'
+          pattern: 'Standalone(\w+)'
           string: ${{ matrix.targetPlatform }}
           replace-with: '$1'
       - name: Upload Release Asset
