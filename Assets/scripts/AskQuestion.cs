@@ -5,6 +5,8 @@ using TMPro;
 
 public class AskQuestion : MonoBehaviour {
 
+    public Canvas joystick;
+
     //public int QuestionNbType;
     private bool isScoreHigherThen40;
 
@@ -70,6 +72,13 @@ public class AskQuestion : MonoBehaviour {
                 DisableMessageText();
                 timer = 1;
             }
+        }
+
+
+        if(isAnsweringQuestion){
+            joystick.enabled = false;
+        }else {
+            joystick.enabled = true;
         }
     }
 

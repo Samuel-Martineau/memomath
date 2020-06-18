@@ -7401,6 +7401,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88fa8b41a6f514850a375adfbf83411c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  joystick: {fileID: 0}
   GQuestion: {fileID: 1543922511424426}
   isAnsweringQuestion: 0
   TexteScore: {fileID: 0}

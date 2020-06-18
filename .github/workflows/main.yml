@@ -1,0 +1,34 @@
+name: Compilation + Déploiement
+
+on: push
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    name: "Compilation pour ${{ matrix.targetPlatform }} avec Unity v${{ matrix.unityVersion }}"
+    strategy:
+      fail-fast: false
+      matrix:
+        unityVersion:
+          - 2019.4.0f1
+        targetPlatform:
+          - StandaloneOSX
+          - StandaloneWindows
+          - StandaloneWindows64
+          - StandaloneLinux64
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          lfs: true
+      - uses: uses: webbertakken/unity-builder@v1.0
+        with:
+          unityVersion: ${{ matrix.unityVersion }}
+          targetPlatform: ${{ matrix.targetPlatform }}
+        env:
+          UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
+          UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
+          UNITY_SERIAL: ${{ secrets.UNITY_SERIAL }}
+      - uses: actions/upload-artifact@v1
+        with:
+          name: Build
+          path: build

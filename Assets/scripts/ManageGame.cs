@@ -6,9 +6,26 @@ using TMPro;
 public class ManageGame : MonoBehaviour {
 
     public GameObject Player;
+    public GameObject joystick;
     public Restart script;
     public bool mobile;
     public TextMeshProUGUI scoreTexte;
+
+    private void Awake()
+    {
+        if (Application.platform == RuntimePlatform.WindowsPlayer || Application.platform == RuntimePlatform.OSXPlayer || Application.platform == RuntimePlatform.LinuxPlayer)
+        {
+            mobile = false;
+        }
+        else if (Application.platform == RuntimePlatform.IPhonePlayer || Application.platform == RuntimePlatform.Android)
+        {
+            mobile = true;
+        }
+        if (mobile)
+        {
+            joystick.SetActive(true);
+        }
+    }
 
     private void Start()
     {
