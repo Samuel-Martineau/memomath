@@ -44,9 +44,7 @@ jobs:
           UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
           UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
           UNITY_SERIAL: ${{ secrets.UNITY_SERIAL }}
-      - run: ls
-      - run: ls -R build
-      - run: '[ -d build/StandaloneOSX/StandaloneOSX.app/Contents/MacOS ] && chmod +x build/StandaloneOSX/StandaloneOSX.app/Contents/MacOS/*'
+      - run: '[ -d build/StandaloneOSX/StandaloneOSX.app/Contents/MacOS ] && sudo chmod +x build/StandaloneOSX/StandaloneOSX.app/Contents/MacOS/*'
         continue-on-error: true
       - uses: papeloto/action-zip@v1
         with:
