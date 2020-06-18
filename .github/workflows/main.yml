@@ -12,7 +12,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: memomath
+          tag_name: memomath - ${{ github.sha }}
           release_name: MémoMath - ${{ github.sha }}
           draft: false
           prerelease: false
