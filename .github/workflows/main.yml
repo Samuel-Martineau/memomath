@@ -3,9 +3,25 @@ name: Compilation + Déploiement
 on: push
 
 jobs:
+  create-release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ github.ref }}
+          release_name: MémoMath
+          draft: false
+          prerelease: false
+    outputs:
+      upload_url: steps.create_release.outputs.upload_url
   build:
     runs-on: ubuntu-latest
     name: 'Compilation pour ${{ matrix.targetPlatform }} avec Unity v${{ matrix.unityVersion }}'
+    needs: create-release
     strategy:
       fail-fast: false
       matrix:
@@ -38,23 +54,13 @@ jobs:
         with:
           files: build/
           dest: build.zip
-      - name: Create Release
-        id: create_release
-        uses: actions/create-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          tag_name: ${{ github.ref }}
-          release_name: Release ${{ github.ref }}
-          draft: false
-          prerelease: false
       - name: Upload Release Asset
         id: upload-release-asset
         uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          upload_url: ${{ needs.create-release.upload_url }}
           asset_path: ./build.zip
           asset_name: ${{ matrix.targetPlatform }}.zip
           asset_content_type: application/zip
