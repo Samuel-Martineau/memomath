@@ -46,6 +46,7 @@ jobs:
           UNITY_SERIAL: ${{ secrets.UNITY_SERIAL }}
       - run: '[ -d build/StandaloneOSX/StandaloneOSX.app/Contents/MacOS ] && sudo chmod a+x build/StandaloneOSX/StandaloneOSX.app/Contents/MacOS/*'
         continue-on-error: true
+      - run: ls -laR build
       - uses: papeloto/action-zip@v1
         with:
           files: build/
