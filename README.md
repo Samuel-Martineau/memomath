@@ -4,7 +4,7 @@ MémoMath est un projet d'Expo Science qui a pour but de démontrer l'éfficacit
 
 ## Résultats
 
-<iframe width="402" height="346" frameborder="0" scrolling="no" src="https://onedrive.live.com/embed?resid=2FD86CE138D151B9%21510&authkey=%21AEv55y52ic3a7D0&em=2&wdAllowInteractivity=False&wdHideGridlines=True&wdHideHeaders=True&wdDownloadButton=True&wdInConfigurator=True"></iframe>
+<div><iframe frameborder="0" scrolling="no" src="https://onedrive.live.com/embed?resid=2FD86CE138D151B9%21510&authkey=%21AEv55y52ic3a7D0&em=2&wdAllowInteractivity=False&wdHideGridlines=True&wdHideHeaders=True&wdDownloadButton=True&wdInConfigurator=True" style="width: 100%; height: 500px;"></iframe></div>
 
 ## Liens de téléchargement
 
