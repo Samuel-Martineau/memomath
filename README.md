@@ -1,6 +1,6 @@
 # Mémomath
 
-MémoMath est un projet d'Expo Science qui a pour but de démontrer l'éfficacité de l'apprentissage par le jeu!
+MémoMath est un projet d'expo-sciences qui a pour but de démontrer l'éfficacité de l'apprentissage par le jeu!
 
 ## Le projet
 
