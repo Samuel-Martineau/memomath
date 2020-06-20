@@ -20,4 +20,4 @@ Nous avons par la suite compilé les résultats et nous nous sommes rendus compt
 
 <br>
 
-> Créé en collaboration avec Kylie Xu et madame Véronique Desjardins de [l'école Saint-Joseph](http://www.stjoseph.qc.ca/)
+> Créé en collaboration avec Kylie Xu et madame Véronique Desjardins de {{< accent >}}[l'école Saint-Joseph](http://www.stjoseph.qc.ca/){{< /accent >}}
