@@ -4,7 +4,7 @@ MémoMath est un projet d'Expo Science qui a pour but de démontrer l'éfficacit
 
 ## Le projet
 
-**[RÉSUMÉ:]** Le but de ce projet d'expo-sciences était de vérifier si l'apprentissage par le jeu (vidéo) est une méthode d'apprentissage efficace. Nous avons donc testé ce jeu _(que j'ai créé)_ sur une classe de première année du primaire. Les élèves ont passé un test de mathématique au début et à la fin de la semaine. Les seules mathématiques qu'ils ont faites durant cette semaine était de joué à ce jeu.
+**[RÉSUMÉ]:** Le but de ce projet d'expo-sciences était de vérifier si l'apprentissage par le jeu (vidéo) est une méthode d'apprentissage efficace. Nous avons donc testé ce jeu _(que j'ai créé)_ sur une classe de première année du primaire. Les élèves ont passé un test de mathématique au début et à la fin de la semaine. Les seules mathématiques qu'ils ont faites durant cette semaine était de joué à ce jeu.
 
 ## Résultats
 
