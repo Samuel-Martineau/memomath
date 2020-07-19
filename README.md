@@ -10,7 +10,6 @@ MémoMath est un projet d'expo-sciences qui a pour but de démontrer l'éfficaci
 
 Nous avons par la suite compilé les résultats et nous nous sommes rendus compte que l'amélioration moyenne était de **5%**.
 
-<iframe frameborder="0" scrolling="no" src="https://onedrive.live.com/embed?resid=2FD86CE138D151B9%21510&authkey=%21AEv55y52ic3a7D0&em=2&wdAllowInteractivity=False&wdHideGridlines=True&wdHideHeaders=True&wdDownloadButton=True&wdInConfigurator=True" style="width: 100%; height: 500px;"></iframe>
 [![Le tableur contenant les résultats](https://raw.githubusercontent.com/Samuel-Martineau/memomath/master/excel_spreadsheet_preview.png "Le tableur contenant les résultats")](https://github.com/Samuel-Martineau/memomath/blob/master/Compilation%20des%20r%C3%A9sultats.xlsx?raw=true)
 
 ## Liens de téléchargement
