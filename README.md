@@ -21,3 +21,8 @@ Nous avons par la suite compilé les résultats et nous nous sommes rendus compt
 <br>
 
 > Créé en collaboration avec Kylie Xu et madame Véronique Desjardins de l'école Saint-Joseph
+
+
+## _P.S._
+
+- Ceci est mon premier jeu, ne soignez pas trop dur avec moi 😟
